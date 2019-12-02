@@ -4,6 +4,8 @@ import TodoForm from './components/TodoComponents/TodoForm';
 import TodoList from './components/TodoComponents/TodoList';
 
 import styled from 'styled-components';
+import './components/TodoComponents/Todo.css';
+
 
 class App extends React.Component {
   // you will need a place to store your state in this component.
@@ -54,9 +56,10 @@ class App extends React.Component {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
-        <p>You may ad items to the list by typing them into the input and clicking Add.</p>
+        <p>You may add items to the list by typing them into the input and clicking Add.</p>
         <p>Existing items may be marked as completed by clicking on them.</p>
         <p>Completed items may be removed by clicking Clear Completed Items.</p>
+        <TodoForm addItem={this.addItem} />
         <TodoList 
           toggleCompleted={this.toggleCompleted}
           clearCompleted={this.clearCompleted}
