@@ -29,10 +29,39 @@ class App extends React.Component {
     })
   }
 
+  clearCompleted = () => {
+    this.setState({
+      toDo: this.state.toDo.filter(item => !item.completed)
+    })
+  };
+
+  toggleCompleted = id => {
+    // loop through toDo data, find toDo item that the user clicked by matching the id
+    // toggle that item's completed property
+
+    this.setState({
+      toDo: this.state.toDo.map(item => {
+        if(item.id === id) {
+          return {...item, completed: !item.completed};
+          } else {
+            return item;
+        }
+      })
+    })
+  };
+
   render() {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
+        <p>You may ad items to the list by typing them into the input and clicking Add.</p>
+        <p>Existing items may be marked as completed by clicking on them.</p>
+        <p>Completed items may be removed by clicking Clear Completed Items.</p>
+        <TodoList 
+          toggleCompleted={this.toggleCompleted}
+          clearCompleted={this.clearCompleted}
+          toDo={this.state.toDo}
+        />
       </div>
     );
   }
