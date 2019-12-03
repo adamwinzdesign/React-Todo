@@ -4,11 +4,11 @@
 import React from 'react';
 import ToDo from './Todo';
 
-import { Button, P } from './ComponentStyles';
+import { Button, P, ListDiv } from './ComponentStyles';
 
 const ToDoList = props => {
   return (
-    <div>
+    <ListDiv>
       <P>Your Items:</P>
       {props.toDo.map(item => (
         <ToDo
@@ -20,7 +20,7 @@ const ToDoList = props => {
       <Button onClick={props.clearCompleted}>
         Clear Completed Items
       </Button>
-    </div>
+    </ListDiv>
   );
 };
 

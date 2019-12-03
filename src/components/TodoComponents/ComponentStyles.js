@@ -2,6 +2,19 @@
 
 import styled from 'styled-components';
 
+export const AppDiv = styled.div`
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+`
+
+export const ListDiv = styled.div`
+  border: 1px solid black;
+  padding: .5rem;
+`
+
 export const H2 = styled.h2`
   font-size: 2rem;
   font-family: 'Bungee Shade', cursive;
