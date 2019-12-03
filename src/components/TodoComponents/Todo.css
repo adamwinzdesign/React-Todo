@@ -1,0 +1,21 @@
+.completed {
+  text-decoration: line-through;
+  background: red;
+}
+
+input {
+  outline: none
+}
+
+input:focus,
+input:active {
+  border-bottom: 2px solid red
+}
+
+button:focus,
+button:active {
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+}
