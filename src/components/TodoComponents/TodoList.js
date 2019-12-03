@@ -4,9 +4,12 @@
 import React from 'react';
 import ToDo from './Todo';
 
+import { Button, P } from './ComponentStyles';
+
 const ToDoList = props => {
   return (
     <div>
+      <P>Your Items:</P>
       {props.toDo.map(item => (
         <ToDo
           key={item.id}
@@ -14,9 +17,9 @@ const ToDoList = props => {
           toggleCompleted={props.toggleCompleted}
         />
       ))}
-      <button onClick={props.clearCompleted}>
+      <Button onClick={props.clearCompleted}>
         Clear Completed Items
-      </button>
+      </Button>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import React from 'react';
 import TodoForm from './components/TodoComponents/TodoForm';
 import TodoList from './components/TodoComponents/TodoList';
 
-import styled from 'styled-components';
+import { H2, P } from './components/TodoComponents/ComponentStyles';
 import './components/TodoComponents/Todo.css';
 
 
@@ -55,10 +55,10 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h2>Welcome to your Todo App!</h2>
-        <p>You may add items to the list by typing them into the input and clicking Add.</p>
-        <p>Existing items may be marked as completed by clicking on them.</p>
-        <p>Completed items may be removed by clicking Clear Completed Items.</p>
+        <H2>Welcome to your Todo App!</H2>
+        <P>You may add items to the list by typing them into the input and clicking Add, or by pressing the Enter/Return key.</P>
+        <P>Existing items may be marked as completed by clicking on them.</P>
+        <P>Completed items may be removed by clicking the Clear Completed Items button.</P>
         <TodoForm addItem={this.addItem} />
         <TodoList 
           toggleCompleted={this.toggleCompleted}
